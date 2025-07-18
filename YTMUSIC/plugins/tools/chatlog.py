@@ -9,7 +9,7 @@ from pyrogram.types import (
     InputMediaVideo,
     Message,
 )
-from config import LOGGER_ID as LOG_GROUP_ID
+from config import LOGGER_ID as LOGGER_ID
 from YTMUSIC import app
 from YTMUSIC.core.userbot import Userbot
 from YTMUSIC.utils.database import delete_served_chat
@@ -45,7 +45,7 @@ async def join_watcher(_, message):
                     f"**❍𝐀ᴅᴅᴇᴅ 𝐁ʏ:** {message.from_user.mention}"
                 )
                 await app.send_photo(
-                    LOG_GROUP_ID,
+                    LOGGER_ID,
                     photo=random.choice(photo),
                     caption=msg,
                     reply_markup=InlineKeyboardMarkup(
